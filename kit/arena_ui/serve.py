@@ -128,7 +128,7 @@ def main(argv=None) -> int:
         print("no runs yet — try:  python spar.py --bot operator --ui", file=sys.stderr)
         return 2
     Handler.run_name = run
-    url = f"http://localhost:{a.port}/?run={run}"
+    url = f"http://localhost:{a.port}/?run={run}&exchange=events"
     print(f"  arena: {url}\n  serving runs/{run}   (ctrl-c to stop)")
     if not a.no_open:
         webbrowser.open(url)
